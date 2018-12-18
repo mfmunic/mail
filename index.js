@@ -46,6 +46,7 @@ app.post("/mail", (req, res) => {
       console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
     });
   });
+  res.end("Recieved!");
 });
 
 const PORT = process.env.PORT || 3001;
