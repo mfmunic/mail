@@ -4,10 +4,11 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const app = express();
 
-app.use(allowCrossDomain);
+// app.use(allowCrossDomain);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors({ origin: "https://mfmunic.github.io/" }));
+// app.use(cors({ origin: "https://mfmunic.github.io/" }));
+app.use(cors());
 
 app.post("/mail", (req, res) => {
   nodemailer.createTestAccount((err, account) => {
