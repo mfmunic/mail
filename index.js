@@ -1,10 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors({ origin: "https://mfmunic.github.io/" }));
 
 app.post("/mail", (req, res) => {
   nodemailer.createTestAccount((err, account) => {

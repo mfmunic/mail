@@ -22,6 +22,7 @@
   "homepage": "https://github.com/mfmunic/mail#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "nodemailer": "^4.7.0"
   }
